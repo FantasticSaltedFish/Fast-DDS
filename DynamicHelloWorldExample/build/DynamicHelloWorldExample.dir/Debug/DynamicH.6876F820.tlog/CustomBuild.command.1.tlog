@@ -1,0 +1,10 @@
+^D:\FASTDDS-EXAMPLE\DYNAMICHELLOWORLDEXAMPLE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FastDDS-Example/DynamicHelloWorldExample -BD:/FastDDS-Example/DynamicHelloWorldExample/build --check-stamp-file D:/FastDDS-Example/DynamicHelloWorldExample/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
